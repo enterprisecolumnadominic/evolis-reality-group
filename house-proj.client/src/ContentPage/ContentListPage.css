@@ -1,0 +1,37 @@
+/* src/ContentPage/ContentListPage.css */
+
+/* === Page Container === */
+.content-list-page-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.list-header {
+  margin-bottom: 50px;
+}
+
+.page-main-heading {
+  font-size: 2.5rem;
+  color: #1e293b;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.page-sub-heading {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .content-list-page-container {
+    margin: 30px auto;
+  }
+
+  .page-main-heading {
+    font-size: 2rem;
+  }
+}

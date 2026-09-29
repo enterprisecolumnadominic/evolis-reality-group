@@ -1,0 +1,235 @@
+/* --- 1. Main Card Container --- */
+.property-card {
+  flex: 0 0 320px;
+  max-width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid #eee;
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(10, 118, 207, 0.15);
+  border-color: #0a76cf33;
+}
+
+/* --- 2. Image Section & Floating Badge --- */
+.card-image-wrapper {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+
+.property-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.1);
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.badge-type-buy {
+  background-color: #0a76cf;
+  color: white !important;
+}
+
+.badge-type-rent {
+  background-color: #ffaa00;
+  color: #1a237e !important;
+}
+
+/* --- 3. Card Content Details --- */
+.card-details {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+
+/* Row 1: Name & Price */
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.card-name,
+.card-name a {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a237e !important;
+  text-decoration: none;
+  margin: 0;
+  line-height: 1;
+}
+
+.card-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a76cf !important;
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Row 2: Address & Sub-Type Pill */
+.card-location-type-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-address {
+  font-size: 0.85rem;
+  color: #555555 !important;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-sub-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a237e !important;
+  background-color: #f0f4f8;
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.card-sub-type svg,
+.card-address svg {
+  color: #0a76cf !important;
+}
+
+/* Row 3: Features Grid (2x2) */
+.card-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: auto;
+}
+
+.card-features-grid .card-sub-type {
+  justify-content: flex-start;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  background-color: #f8fafc;
+  border: 1px solid #edf2f7;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+}
+
+.property-card:hover .card-features-grid .card-sub-type {
+  background-color: #f0f4f8;
+  border-color: #e2e8f0;
+}
+
+.card-features-grid .card-sub-type svg {
+  font-size: 0.9rem;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.card-features-grid .card-sub-type span {
+  color: #1a237e !important;
+  font-weight: 500; /* Medium weight for less boldness */
+  letter-spacing: 0.2px;
+}
+
+.badge-type-foreclosed {
+  background-color: #d32f2f; /* Strong Red */
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+  }
+}
+
+/* --- 5. Responsive Adjustments --- */
+@media (max-width: 480px) {
+  .property-card {
+    max-width: 100%; /* Allow card to take full width on small phones */
+    flex: 1 1 100%;
+  }
+
+  .card-image-wrapper {
+    height: 180px; /* Slightly shorter image to show more content on screen */
+  }
+
+  .card-details {
+    padding: 15px; /* Tighter padding for more horizontal space */
+  }
+
+  .card-name,
+  .card-name a,
+  .card-price {
+    font-size: 1.05rem; /* Slightly smaller titles */
+  }
+
+  .card-location-type-row {
+    flex-direction: row; /* Keep address and type side-by-side */
+    gap: 8px;
+  }
+
+  .card-address {
+    font-size: 0.8rem;
+    max-width: 60%; /* Ensure address doesn't squash the type badge */
+  }
+
+  .card-features-grid {
+    gap: 8px; /* Tighter gap between boxes */
+  }
+
+  .card-features-grid .card-sub-type {
+    padding: 6px 8px;
+    font-size: 0.75rem; /* Smaller text for stats boxes */
+  }
+}

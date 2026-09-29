@@ -1,0 +1,33 @@
+/* src/PropertyPage/PropertyDetailsPage/components/Features/PropertyFeatures.css */
+
+.details-main-content {
+  width: 35%;
+  float: right;
+  padding: 0 20px;
+}
+
+.details-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.feature-box {
+  background: white;
+  padding: 15px;
+  border-left: 5px solid #0a76cf;
+  border-radius: 4px;
+  color: #1a237e;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.description-text {
+  line-height: 1.7;
+  color: #444;
+  white-space: pre-line; /* Keeps your text formatting clean */
+}

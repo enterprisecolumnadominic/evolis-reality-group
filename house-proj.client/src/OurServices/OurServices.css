@@ -1,0 +1,146 @@
+/* --- 1. Section Layout & Header --- */
+.os-main-container {
+  background-color: #fcfcfc;
+  padding: 100px 0;
+}
+
+.os-badge {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0a76cf;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.os-section-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #1a237e;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.os-title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #0a76cf;
+  margin: 20px auto;
+}
+
+/* --- 2. Service Cards Structure --- */
+.os-service-card {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px; /* Subtle architectural rounding */
+  transition:
+    transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s ease;
+}
+
+.os-service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(26, 35, 126, 0.15);
+}
+
+/* --- 3. Background Images --- */
+.os-buy {
+  background-image: url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80");
+}
+.os-loans {
+  background-image: url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=800&q=80");
+}
+.os-marketing {
+  background-image: url("https://images.unsplash.com/photo-1517292987719-0369a794ec0f??auto=format&fit=crop&w=800&q=80");
+}
+
+/* --- 4. Card Overlay (The Dark Gradient) --- */
+.os-card-overlay {
+  position: absolute;
+  inset: 0;
+  /* Gradient flows from dark Navy at bottom to transparent at top */
+  background: linear-gradient(
+    to top,
+    rgba(26, 35, 126, 0.95) 0%,
+    rgba(26, 35, 126, 0.4) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.os-service-card:hover .os-card-overlay {
+  background-color: rgba(26, 35, 126, 0.5); /* Slight darkening on hover */
+}
+
+/* --- 5. Internal Content --- */
+.os-content-box {
+  width: 100%;
+}
+
+.os-card-title {
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.os-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+/* --- 6. The Strategic Button --- */
+.os-action-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 12px 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0; /* Squared for professional/real estate look */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.os-action-btn:hover {
+  background-color: #ffffff;
+  color: #1a237e;
+  transform: scale(1.05);
+}
+
+/* --- 7. Mobile Adjustments --- */
+@media (max-width: 991px) {
+  .os-main-container {
+    padding: 60px 0;
+  }
+  .os-service-card {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .os-service-card {
+    height: 350px;
+  }
+  .os-card-title {
+    font-size: 1.5rem;
+  }
+  .os-card-overlay {
+    padding: 30px;
+  }
+}

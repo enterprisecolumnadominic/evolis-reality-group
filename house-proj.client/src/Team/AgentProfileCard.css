@@ -1,0 +1,179 @@
+/* src/Team/AgentProfileCard.css */
+
+:root {
+  --brand-blue: #0a76cf;
+  --dark-navy: #1a237e;
+  --light-bg: #f4f7fc;
+  --border-light: #eee;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+}
+
+/* Main Card Container */
+.agent-profile-card {
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Header Section: Photo & Identity */
+.agent-main-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 20px;
+}
+
+.agent-photo-container {
+  flex-shrink: 0;
+  height: 250px;
+}
+
+.agent-photo {
+  height: 100%;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 4px solid var(--brand-blue);
+}
+
+.agent-text-content {
+  flex: 1;
+}
+
+.agent-title-info h2 {
+  font-size: 1.8rem;
+  color: var(--dark-navy);
+  margin: 0 0 5px;
+}
+
+.agent-title {
+  font-size: 1.1rem;
+  color: var(--brand-blue);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.agent-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #444;
+  margin: 6px 0;
+}
+
+/* Bio / Description Section */
+.agent-description-block {
+  padding-top: 15px;
+  border-top: 1px dashed var(--border-light);
+}
+
+.agent-description-text {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Bottom Details Section (Specialties & Languages) */
+.agent-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.agent-details-container h3 {
+  font-size: 1.1rem;
+  color: var(--brand-blue);
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.agent-details-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.agent-details-container li {
+  background-color: var(--light-bg);
+  border-left: 3px solid var(--brand-blue);
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--dark-navy);
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* Layout for Specialties (2-Column Grid) */
+.specialties-grid,
+.languages-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+}
+
+/* Social Links Footer */
+.agent-socials {
+  border-top: 1px solid var(--border-light);
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.agent-socials a {
+  font-size: 1.5rem;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+/* 🎯 Official Brand Colors */
+.agent-socials a.fb {
+  color: #1877f2;
+} /* Facebook Blue */
+.agent-socials a.tw {
+  color: #1da1f2;
+} /* Twitter/X Blue */
+.agent-socials a.li {
+  color: #0a66c2;
+} /* LinkedIn Navy */
+.agent-socials a.yt {
+  color: #ff0000;
+} /* YouTube Red */
+.agent-socials a.ig {
+  color: #e4405f;
+} /* Instagram Pink/Red */
+
+/* Interaction Effects */
+.agent-socials a:hover {
+  transform: translateY(-4px);
+  /* 🎯 Makes the original color pop slightly more on hover */
+  filter: brightness(1.2);
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .agent-main-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .agent-contact p {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .specialties-grid {
+    grid-template-columns: 1fr; /* Stack specialties on very small screens */
+  }
+}

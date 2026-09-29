@@ -1,0 +1,125 @@
+/* --- 1. Section Layout & Typography --- */
+.wwu-main-container {
+  background-color: #f8fafc;
+  padding: 80px 0;
+}
+
+.wwu-section-tag {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0a76cf;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.wwu-section-subtitle {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #1a237e;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.wwu-title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #0a76cf;
+  margin: 20px auto 40px;
+}
+
+/* --- 2. The 3D Split Card --- */
+.wwu-split-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* Constant 3D Shadow */
+  box-shadow:
+    0 8px 12px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out;
+}
+
+.wwu-split-card:hover {
+  /* The "Card Draw" effect */
+  transform: translateY(-6px);
+  box-shadow:
+    0 15px 25px -5px rgba(0, 0, 0, 0.12),
+    0 8px 10px -5px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 3. Card Visual Components --- */
+.wwu-card-image-wrapper {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.wwu-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wwu-card-text-area {
+  flex-grow: 1;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+}
+
+/* --- 4. Card Typography & Action --- */
+.wwu-card-title-dark {
+  font-family: "Playfair Display", serif;
+  color: #1a237e;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.wwu-description-dark {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.wwu-inquiry-link {
+  margin-top: auto;
+  color: #0a76cf;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.2s ease;
+}
+
+.wwu-split-card:hover .wwu-inquiry-link {
+  color: #1a237e;
+}
+
+/* --- 5. Mobile Adjustments --- */
+@media (max-width: 768px) {
+  .wwu-main-container {
+    padding: 60px 20px;
+  }
+
+  .wwu-card-image-wrapper {
+    height: 180px;
+  }
+}

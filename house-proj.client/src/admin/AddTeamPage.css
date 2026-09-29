@@ -1,0 +1,211 @@
+/* src/admin/AddTeamPage.css */
+
+:root {
+  --atp-primary: #1a237e;
+  --atp-primary-dark: #0d1440;
+  --atp-text-main: #1e293b;
+  --atp-text-muted: #64748b;
+  --atp-border: #cbd5e1;
+  --atp-bg: #f0f2f5;
+  --atp-white: #ffffff;
+}
+
+#atp-container {
+  padding: 60px 20px;
+  background-color: var(--atp-bg);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--atp-text-main);
+}
+
+#atp-container .atp-card {
+  background: var(--atp-white);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Navigation --- */
+#atp-container .atp-back-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--atp-text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+#atp-container .atp-back-btn:hover {
+  color: var(--atp-primary);
+  transform: translateX(-3px); /* Subtle nudge effect */
+}
+
+/* --- Typography & Sections --- */
+#atp-container h1 {
+  color: var(--atp-primary);
+  margin-bottom: 8px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+#atp-container .atp-section {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #edf2f7;
+}
+
+#atp-container .atp-section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #5c6bc0;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* --- Form Fields --- */
+#atp-container .atp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#atp-container label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Grouped Input Selectors for cleaner code */
+#atp-container input,
+#atp-container select,
+#atp-container textarea {
+  padding: 12px;
+  border: 1px solid var(--atp-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--atp-white);
+  color: #334155;
+  width: 100%;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+#atp-container input:focus,
+#atp-container select:focus,
+#atp-container textarea:focus {
+  outline: none;
+  border-color: var(--atp-primary);
+  box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.08);
+}
+
+/* --- Grid Logic --- */
+#atp-container .atp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+#atp-container .three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+#atp-container .full-width {
+  grid-column: span 2;
+}
+
+#atp-container .atp-bio textarea {
+  height: 140px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* --- Footer Actions --- */
+#atp-container .atp-footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f7;
+}
+
+#atp-container .atp-submit,
+#atp-container .atp-discard {
+  padding: 12px 35px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#atp-container .atp-submit {
+  background-color: var(--atp-primary);
+  color: var(--atp-white);
+  border: none;
+}
+
+#atp-container .atp-submit:hover {
+  background-color: var(--atp-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 35, 126, 0.2);
+}
+
+#atp-container .atp-discard {
+  background: transparent;
+  color: var(--atp-text-muted);
+  border: 1px solid var(--atp-border);
+  font-weight: 600;
+}
+
+#atp-container .atp-discard:hover {
+  background-color: #f8fafc;
+  color: var(--atp-text-main);
+  border-color: var(--atp-text-muted);
+}
+
+/* --- Account Visibility Section --- */
+#atp-container .atp-status-zone {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #f8fafc;
+  border: 1px solid var(--atp-border);
+  border-radius: 8px;
+}
+
+#atp-container .atp-status-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#atp-container .atp-status-info h3 {
+  margin: 0;
+  color: var(--atp-primary);
+  font-size: 1rem;
+}
+
+#atp-container .atp-help-text {
+  font-size: 0.85rem;
+  color: var(--atp-text-muted);
+  margin-top: 4px;
+}
+
+/* Dynamic status coloring for the select box */
+#atp-container .status-active {
+  border-left: 5px solid #22c55e;
+  font-weight: 600;
+}
+
+#atp-container .status-inactive {
+  border-left: 5px solid #ef4444;
+  font-weight: 600;
+}

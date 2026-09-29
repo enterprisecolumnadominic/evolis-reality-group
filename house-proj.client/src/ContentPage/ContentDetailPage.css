@@ -1,0 +1,226 @@
+/* --- ROOT WRAPPER & LAYOUT --- */
+#content-detail-root {
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1e293b;
+}
+
+#content-detail-root .content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+}
+
+/* --- HEADER SECTION --- */
+#content-detail-root .content-header {
+  padding: 60px 20px 40px;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+#content-detail-root .meta-top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  max-width: 850px;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+}
+
+#content-detail-root .back-button {
+  justify-self: start;
+  margin-left: -80px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0a76cf;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+#content-detail-root .back-button:hover {
+  color: #1a237e;
+  transform: translateX(-5px);
+}
+
+/* 🎯 TYPE PILL (Centered) */
+#content-detail-root .type-pill {
+  justify-self: center;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+#content-detail-root .type-pill.blog {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+#content-detail-root .type-pill.event {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+#content-detail-root h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: #1e293b;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 auto 30px;
+  max-width: 850px;
+}
+
+#content-detail-root .author-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+#content-detail-root .author-line strong {
+  color: #0f172a;
+}
+
+/* --- CONTENT SECTIONS --- */
+#content-detail-root .event-info-banner {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: #92400e;
+}
+
+#content-detail-root .content-tagline {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 0 20px 40px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #2a3747;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+#content-detail-root .content-featured-image {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#content-detail-root .content-featured-image img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+#content-detail-root .content-rich-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+/* --- FOOTER (TAGS & SOCIALS) --- */
+#content-detail-root .content-footer {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #f1f5f9;
+}
+
+#content-detail-root .tag-badge {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 8px;
+  transition: 0.2s;
+}
+
+#content-detail-root .tag-badge:hover {
+  background: #1a237e;
+  color: #fff;
+}
+
+#content-detail-root .content-social-icons {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+#content-detail-root .icon-btn {
+  font-size: 2.2rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+#content-detail-root .icon-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+/* --- BRAND COLORS --- */
+#content-detail-root .icon-btn [data-icon*="facebook"] {
+  color: #1877f2;
+}
+#content-detail-root .icon-btn [data-icon*="twitter"] {
+  color: #1da1f2;
+}
+#content-detail-root .icon-btn [data-icon*="linkedin"] {
+  color: #0a66c2;
+}
+#content-detail-root .icon-btn.wa {
+  color: #25d366;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1100px) {
+  /* Prevent back button from flying off screen */
+  #content-detail-root .back-button {
+    margin-left: 0;
+  }
+  #content-detail-root .meta-top {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+  #content-detail-root .type-pill {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 768px) {
+  #content-detail-root .content-header {
+    padding: 40px 15px;
+  }
+  #content-detail-root h1 {
+    font-size: 2rem;
+  }
+  #content-detail-root .content-tagline {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,170 @@
+/* src/admin/AddContentPage.css */
+
+:root {
+  --acp-primary: #1a237e;
+  --acp-primary-dark: #0d1440;
+  --acp-text-main: #1e293b;
+  --acp-text-muted: #64748b;
+  --acp-border: #cbd5e1;
+  --acp-bg: #f0f2f5;
+  --acp-white: #ffffff;
+}
+
+#acp-container {
+  padding: 60px 20px;
+  background-color: var(--acp-bg);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--acp-text-main);
+}
+
+#acp-container .acp-card {
+  background: var(--acp-white);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+#acp-container .acp-back-btn {
+  background: transparent;
+  border: 0;
+  color: var(--acp-text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+#acp-container .acp-back-btn:hover {
+  color: var(--acp-primary);
+  transform: translateX(-3px);
+}
+
+#acp-container h1 {
+  color: var(--acp-primary);
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+#acp-container .acp-section {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid #edf2f7;
+}
+
+#acp-container .acp-section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #5c6bc0;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+#acp-container .acp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+#acp-container .full-width {
+  grid-column: span 2;
+}
+
+#acp-container .acp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#acp-container label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+#acp-container input,
+#acp-container select,
+#acp-container textarea {
+  padding: 12px;
+  border: 1px solid var(--acp-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#acp-container textarea {
+  height: 250px;
+  resize: vertical;
+}
+
+#acp-container .acp-footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f7;
+}
+
+#acp-container .acp-submit {
+  background-color: var(--acp-primary);
+  color: var(--acp-white);
+  border: none;
+  padding: 12px 35px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#acp-container .acp-discard {
+  background: transparent;
+  color: var(--acp-text-muted);
+  border: 1px solid var(--acp-border);
+  padding: 12px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#acp-container .acp-status-zone {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: #f8fafc;
+  border: 1px solid var(--acp-border);
+  border-radius: 8px;
+}
+
+#acp-container .acp-status-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#acp-container .status-active {
+  border-left: 5px solid #22c55e;
+}
+#acp-container .status-inactive {
+  border-left: 5px solid #ef4444;
+}
+
+/* Specific height for the Tagline to distinguish it from Main Content */
+#acp-container .acp-tagline-area textarea {
+  height: 100px;
+  background-color: #fdfdfd;
+  font-weight: 500;
+  border-style: dashed;
+}
+
+#acp-container .acp-content-area textarea {
+  height: 400px;
+}
+
+#acp-container .full-width {
+  grid-column: span 2;
+}

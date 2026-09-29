@@ -1,0 +1,22 @@
+/* App.css */
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Global Resets */
+body,
+#root,
+.App {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  color-scheme: light;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+main h1 {
+  text-align: left;
+}

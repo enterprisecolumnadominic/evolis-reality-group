@@ -1,0 +1,42 @@
+/* src/PropertyPage/PropertyDetailsPage/PropertyDetailsPage.css */
+
+.property-details-page {
+  padding: 30px 0;
+  background-color: #f8f8f8;
+}
+
+/* 1. Layout Wrapper - Controls the 65/35 Gallery vs Features split */
+.main-content-layout-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Critical for Float layouts */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 2. Shared Typography - Used across multiple sections */
+.section-heading {
+  font-size: 1.5rem;
+  color: #1a237e;
+  border-bottom: 2px solid #0a76cf;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 900px) {
+  .details-image-gallery,
+  .details-main-content,
+  .details-map-contact {
+    width: 100% !important;
+    float: none !important;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,106 @@
+.lt-main-container {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.lt-header {
+  margin-bottom: 60px;
+}
+
+.lt-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #1a237e;
+  font-weight: 700;
+}
+
+/* --- Split Card Design --- */
+.lt-split-card {
+  height: 520px; /* Increased slightly to fit both title and text comfortably */
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #f0f0f0;
+}
+
+.lt-split-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(10, 118, 207, 0.12);
+  border-color: #0a76cf;
+}
+
+/* Image Section */
+.lt-card-image {
+  height: 45%; /* Slightly less than half to give text more room */
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s ease;
+}
+
+.lt-split-card:hover .lt-card-image {
+  transform: scale(1.1);
+}
+
+/* Content Section */
+.lt-card-content {
+  height: 55%;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+/* Internal Title */
+.lt-internal-card-title {
+  font-family: "Playfair Display", serif;
+  color: #1a237e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Small accent line under internal title */
+.lt-internal-card-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #0a76cf;
+  border-radius: 2px;
+}
+
+.lt-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Background Images */
+.lt-fixed {
+  background-image: url("https://images.unsplash.com/photo-1630487656049-6db93a53a7e9?fit=crop&w=600&q=80");
+}
+.lt-jumbo {
+  background-image: url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?fit=crop&w=600&q=80");
+}
+.lt-gov {
+  background-image: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?fit=crop&w=600&q=80");
+}
+
+@media (max-width: 991px) {
+  .lt-split-card {
+    height: 480px;
+  }
+}

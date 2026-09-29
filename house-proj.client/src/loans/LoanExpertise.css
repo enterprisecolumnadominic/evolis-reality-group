@@ -1,0 +1,202 @@
+/* --- 1. Main Section Wrapper --- */
+.loan-expertise-section {
+  padding: 100px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* --- 2. Section Header --- */
+.loan-expertise-section-text {
+  text-align: center;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.loan-expertise-section-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #1a237e;
+  font-weight: 800;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 25px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: revealDown 0.8s ease forwards;
+}
+
+.loan-expertise-section-text h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #0a76cf;
+}
+
+/* --- 3. Grid & Cards --- */
+.expertise-grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.expertise-card {
+  flex: 1;
+  background: #ffffff;
+  padding: 50px 35px;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+  position: relative;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(10, 118, 207, 0.12);
+  border-color: #0a76cf;
+}
+
+.expertise-icon-box {
+  color: #0a76cf;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.expertise-card h3 {
+  font-family: "Playfair Display", serif;
+  color: #1a237e;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.expertise-card p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.expertise-number {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(10, 118, 207, 0.05);
+}
+
+.expertise-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #0a76cf;
+  opacity: 0.3;
+  animation: revealUp 0.8s ease forwards;
+}
+
+/* --- 4. Centered Action Area --- */
+.loan-expertise-section .loan-action-area {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  animation: revealUp 0.8s ease forwards;
+  animation-delay: 1.4s;
+}
+
+.loan-expertise-section .loan-action-area a {
+  text-decoration: none !important;
+  display: inline-flex;
+}
+
+/* --- 5. Button with Hero Hover Effect --- */
+.loan-prequal-btn {
+  background-color: #0a76cf;
+  color: white;
+  border: 1px solid #0a76cf;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Matching the Hero Banner Hover Effect */
+.loan-prequal-btn:hover {
+  background-color: transparent;
+  color: #0a76cf; /* Brand blue instead of white since background is light */
+  border: 1px solid #0a76cf;
+  transform: translateY(-3px);
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.loan-prequal-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* --- 6. Animations & Mobile --- */
+@keyframes revealDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-1 {
+  animation-delay: 0.4s;
+}
+.arrow-1 {
+  animation-delay: 0.6s;
+}
+.card-2 {
+  animation-delay: 0.8s;
+}
+.arrow-2 {
+  animation-delay: 1s;
+}
+.card-3 {
+  animation-delay: 1.2s;
+}
+
+@media (max-width: 991px) {
+  .expertise-grid {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .expertise-arrow {
+    transform: rotate(90deg);
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .loan-prequal-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

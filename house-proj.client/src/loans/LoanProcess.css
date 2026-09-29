@@ -1,0 +1,157 @@
+.loan-process-section {
+  padding: 100px 0;
+  background-color: #fcfcfc;
+  overflow: hidden;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.process-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: #1a237e;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.process-header p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Roadmap Layout --- */
+.process-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 30px;
+}
+
+/* The horizontal connecting line */
+.process-line {
+  position: absolute;
+  top: 60px; /* Aligns with the middle of the icons */
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #0a76cf 0,
+    #0a76cf 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.process-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered entry */
+.step-1 {
+  animation-delay: 0.2s;
+}
+.step-2 {
+  animation-delay: 0.4s;
+}
+.step-3 {
+  animation-delay: 0.6s;
+}
+.step-4 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Icon Styling --- */
+.process-icon-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.process-icon {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border: 2px solid #0a76cf;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #0a76cf;
+  box-shadow: 0 10px 25px rgba(10, 118, 207, 0.1);
+  transition: all 0.4s ease;
+}
+
+.process-step:hover .process-icon {
+  background-color: #0a76cf;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(10, 118, 207, 0.3);
+}
+
+.process-step-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #1a237e;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  z-index: 3;
+}
+
+/* --- Typography --- */
+.process-step h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: #1a237e;
+  margin-bottom: 15px;
+}
+
+.process-step p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 991px) {
+  .process-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-line {
+    display: none; /* Hide horizontal line on mobile */
+  }
+  .process-step {
+    margin-bottom: 50px;
+  }
+}

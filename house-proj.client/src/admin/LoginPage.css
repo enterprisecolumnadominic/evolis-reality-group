@@ -1,0 +1,93 @@
+/* src/admin/LoginPage.css */
+
+#login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Light tone background instead of deep blue */
+  background-color: #f8fafc;
+  font-family: "Inter", sans-serif;
+}
+
+#login-container .login-glass-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid #1a237e;
+}
+
+#login-container .login-header {
+  text-align: center;
+  margin-bottom: 25px; /* Lessened margin */
+}
+
+#login-container h1 {
+  color: #1a237e;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+#login-container p {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* --- Form Elements --- */
+#login-container .login-field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#login-container label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+#login-container input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #ffffff;
+  transition: all 0.2s;
+}
+
+#login-container input:focus {
+  outline: none;
+  border-color: #1a237e;
+  box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.05);
+}
+
+#login-container .login-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s;
+}
+
+#login-container .login-submit-btn:hover {
+  background-color: #0d1440;
+}
+
+#login-container .login-footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}

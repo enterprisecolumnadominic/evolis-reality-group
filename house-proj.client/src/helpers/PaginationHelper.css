@@ -1,0 +1,55 @@
+/* src/helpers/PaginationHelper.css */
+
+/* Center the navigation */
+.pagination-container-nav {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+/* Style the list */
+.pagination-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 5px;
+  border-radius: 4px;
+}
+
+/* Style the buttons */
+.page-button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.page-button:hover:not(.disabled) {
+  background-color: #f8f9fa;
+  border-color: #bbb;
+}
+
+/* Active State */
+.page-item.active .page-button {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Disabled State */
+.page-item.disabled .page-button {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+/* Dots style */
+.dots-item .page-button {
+  border: none;
+  cursor: default;
+}

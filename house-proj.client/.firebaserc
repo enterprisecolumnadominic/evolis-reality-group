@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "house-proj-fff2a"
+  },
+  "targets": {
+    "house-proj-fff2a": {
+      "hosting": {
+        "prod": [
+          "evolisrealitygroup-ph",
+          "may-housing-ph"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

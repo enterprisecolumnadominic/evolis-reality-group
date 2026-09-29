@@ -1,0 +1,116 @@
+/* src/carousel/EmployeeCarousel.css */
+
+.employee-carousel-section {
+  position: relative;
+  padding: 60px 20px;
+  background-color: #0b1a37;
+  border: clamp(10px, 5vw, 50px) solid white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.employee-carousel-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c9c7c7;
+  margin: 0 0 5px;
+}
+
+.employee-carousel-section .section-subtitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* --- Slider Wrapper --- */
+.agent-slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 900px;
+  gap: 20px;
+}
+
+/* --- Reusable Card Override --- */
+
+/* --- Navigation --- */
+.agent-nav-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+.agent-nav-btn:hover {
+  background: white;
+  color: #0b1a37;
+}
+
+/* --- Indicators --- */
+.agent-carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.agent-indicator-dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(74, 144, 226, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.agent-indicator-dot.active {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* --- Animations --- */
+.carousel-card-container {
+  flex: 1;
+  animation: carouselFadeIn 0.5s ease-out;
+}
+
+@keyframes carouselFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 850px) {
+  .employee-carousel-section {
+    padding: 40px 10px;
+  }
+
+  .agent-slider-wrapper {
+    gap: 10px;
+  }
+
+  .agent-nav-btn {
+    width: 35px;
+    height: 35px;
+  }
+}

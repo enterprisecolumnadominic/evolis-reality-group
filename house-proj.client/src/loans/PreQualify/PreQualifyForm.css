@@ -1,0 +1,109 @@
+.pq-form-wrapper {
+  background-color: #f4f7f9;
+  padding: 80px 0;
+}
+
+.pq-card {
+  max-width: 950px; /* Slightly wider for the full form */
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid #1a237e; /* Navy accent top */
+}
+
+.pq-main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #1a237e;
+  font-weight: 800;
+}
+
+.pq-section-header {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0a76cf;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: #0a76cf;
+  box-shadow: none;
+}
+
+.pq-submit-wide-btn {
+  background-color: #0a76cf;
+  color: white;
+  border: none;
+  padding: 18px 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.pq-submit-wide-btn:hover {
+  background-color: #1a237e;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(10, 118, 207, 0.3);
+}
+
+/* Sharp error borders */
+.form-control.is-invalid {
+  border-color: #dc3545 !important;
+  background-image: none; /* Removes the default Bootstrap icon if you want a cleaner look */
+}
+
+.form-control,
+.form-select {
+  transition: border-color 0.2s ease-in-out;
+}
+
+.invalid-feedback {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+/* PreQualifyForm.css */
+
+.pq-submit-wide-btn:disabled {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+  border-color: #999999 !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+  /* Removes hover effects when disabled */
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .pq-card {
+    padding: 30px;
+  }
+}

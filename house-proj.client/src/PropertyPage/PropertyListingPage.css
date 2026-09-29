@@ -1,0 +1,158 @@
+/* --- 1. Layout & Typography --- */
+.property-listing-page {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.listing-header-container {
+  border-bottom: 2px solid #0a76cf;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.listing-header-container h1 {
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+/* --- 2. Toolbar Layout (The Single Line Row) --- */
+.listing-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Group 1: Filters (Left) */
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.filter-controls label,
+.search-container label {
+  font-weight: 500;
+  color: #1a237e;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.filter-icon,
+.search-icon {
+  color: #0a76cf;
+  margin-right: 8px;
+}
+
+/* Group 2: Search Container (Middle - Expands) */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1; /* Fills all available middle space */
+  padding: 0 10px;
+}
+
+/* Group 3: View Controls (Right) */
+.view-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* --- 3. Form Elements (Selects & Inputs) --- */
+.filter-select,
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filter-select {
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.search-input {
+  flex: 1; /* Makes Name and City inputs expand equally */
+  min-width: 120px;
+}
+
+.filter-select:focus,
+.search-input:focus {
+  border-color: #0a76cf;
+  box-shadow: 0 0 0 3px rgba(10, 118, 207, 0.1);
+}
+
+/* --- 4. Buttons & Text --- */
+.reset-btn {
+  padding: 10px 20px;
+  background-color: #0a76cf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: #1a237e;
+}
+
+.count-text {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* --- 5. Property Grid (Untouched) --- */
+.property-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 10px 0;
+  justify-items: center;
+}
+
+.property-grid-container .property-card {
+  max-width: 100%;
+  width: 100%;
+  flex: initial;
+}
+
+/* --- 6. Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+  .listing-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .view-controls {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "apiBaseUrl": "https://house-project-api-25626618311.us-central1.run.app/api",
+  "recaptcha": {
+    "siteKey": "6Lcz8EssAAAAAMpES2Ng-5NsTN1-e5TOf-UEe7ss"
+  },
+  "endpoints": {
+    "sessionInit": "Session/init",
+    "login": "Auth/login",
+    "logout": "Auth/logout",
+    "emailSend": "Email/send",
+    "preQualify": "Email/pre-qualify",
+    "properties": "Properties",
+    "team": "Employees",
+    "content": "Content"
+  }
+}

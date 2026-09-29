@@ -1,0 +1,92 @@
+/* --- Section Title and Container --- */
+.property-carousel-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a237e;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+/* --- Horizontal Scroll Logic --- */
+.property-list-container {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 20px 10px 30px 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  justify-content: center;
+}
+.property-list-container::after,
+.property-list-container::before {
+  content: "";
+  flex: 0 0 0;
+}
+.property-list-container .property-card {
+  flex: 0 0 320px;
+  scroll-snap-align: center;
+  max-width: 100%;
+}
+
+.property-list-container::-webkit-scrollbar {
+  display: none;
+}
+
+.property-list-container .property-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+
+/* --- View More Button --- */
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more-button {
+  border: 2px solid #0a76cf;
+  background-color: transparent;
+  color: #0a76cf;
+  padding: 12px 35px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-more-button:hover {
+  background-color: #0a76cf;
+  color: white;
+}
+
+/* Styling for the Foreclosed Carousel Title */
+.foreclosed-section .section-subtitle {
+  color: #d32f2f;
+  font-weight: 800;
+  padding-left: 10px;
+}
+
+.foreclosed-section {
+  background-color: #fffcfc;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}

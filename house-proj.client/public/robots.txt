@@ -1,0 +1,11 @@
+# 1. Tell all search engines they are welcome
+User-agent: *
+
+# 2. List the areas they should NOT look at (Security)
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /auth/login
+Disallow: /api/           # Block direct API scraping, let them use the frontend
+
+# 3. Tell them exactly where the Dynamic Sitemap is
+Sitemap: https://house-project-api-25626618311.us-central1.run.app/sitemap.xml

@@ -1,0 +1,46 @@
+/* --- 1. Main Section Container --- */
+.loan-page-exclusive-deals-section {
+  background-color: #ffffff !important; /* Force out any inherited red tints */
+  padding: 100px 0; /* Consistent with your Expertise section */
+}
+
+/* --- 2. Title Styling --- */
+.loan-page-exclusive-deals-section .loan-page-exclusive-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: #1a237e; /* Professional Navy */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0; /* Let the underline handle the margin */
+}
+
+/* --- 3. The Accent Underline --- */
+.loan-page-exclusive-deals-section .loan-page-title-underline {
+  width: 70px;
+  height: 4px;
+  background-color: #0a76cf; /* Brand Blue */
+  margin: 20px auto; /* Centers the block and adds vertical spacing */
+}
+
+/* --- 4. Description Text --- */
+.loan-page-exclusive-deals-section .loan-page-exclusive-description {
+  font-family: "Inter", sans-serif;
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- 5. Carousel Integration Fixes --- */
+/* This forces the carousel container to respect the clean white theme */
+.loan-page-exclusive-deals-section .foreclosed-section {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+/* Remove any leftover red text from the carousel's internal subtitle if it exists */
+.loan-page-exclusive-deals-section .section-subtitle {
+  display: none !important; /* We use our own header now */
+}

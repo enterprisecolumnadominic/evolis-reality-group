@@ -1,0 +1,81 @@
+/* src/components/TokenPagination.css */
+
+.pagination-container-nav {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  font-family: inherit;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 0; /* Removed gap for a unified "pill" look */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Base button styles */
+.page-button {
+  padding: 10px 20px;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  color: #007bff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+/* Hover effects for actionable buttons only */
+.page-button:hover:not(:disabled):not(.current-display) {
+  background-color: #e9ecef;
+  color: #0056b3;
+  z-index: 2;
+}
+
+/* Middle Display (The Status) */
+.current-display {
+  background-color: #007bff !important;
+  color: white !important;
+  border-color: #007bff !important;
+  cursor: default;
+  min-width: 140px;
+  text-align: center;
+  pointer-events: none; /* User cannot interact with the status text */
+}
+
+/* Disabled State handling */
+.page-item.disabled .page-button {
+  color: #adb5bd;
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Remove double borders between items */
+.page-item:not(:first-child) .page-button {
+  margin-left: -1px;
+}
+
+/* Rounded corners for the "Pill" effect */
+.page-item:first-child .page-button {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.page-item:last-child .page-button {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Shadow for the navigation */
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}

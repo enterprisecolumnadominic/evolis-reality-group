@@ -1,0 +1,123 @@
+/* src/components/Footer/Footer.css */
+
+:root {
+  --footer-bg: #1a237e;
+  --footer-accent: #0a76cf;
+  --footer-text-muted: #cccccc;
+  --footer-heading: #4a90e2;
+  --footer-border: rgba(255, 255, 255, 0.1);
+  --transition: all 0.3s ease;
+}
+
+.app-footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 60px 0 30px 0; /* More top padding for a premium feel */
+  border-top: 5px solid var(--footer-accent);
+}
+
+.footer-grid {
+  display: grid;
+  /* 🎯 Use Grid instead of Flex for perfect alignment */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  border-bottom: 1px solid var(--footer-border);
+}
+
+/* --- Columns --- */
+.footer-column h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 25px;
+  color: var(--footer-heading);
+  font-weight: 700;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+  color: var(--footer-text-muted);
+}
+
+.footer-column a {
+  color: var(--footer-text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+/* Icons styling */
+.footer-column li svg {
+  color: var(--footer-heading);
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* --- Social Section --- */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  transform: translateY(-4px);
+}
+
+/* 🎯 Brand-specific hover colors */
+.social-icon.whatsapp:hover {
+  color: #25d366;
+}
+.social-icon.telegram:hover {
+  color: #0088cc;
+}
+.social-icon:not(.whatsapp):not(.telegram):hover {
+  color: var(--footer-heading);
+}
+
+/* --- Copyright --- */
+.footer-copyright {
+  text-align: center;
+  padding: 30px 20px 0 20px;
+  font-size: 0.85rem;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .app-footer {
+    padding-top: 40px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+    /* On mobile, center the text for a better look */
+    text-align: center;
+  }
+
+  .footer-column li {
+    justify-content: center;
+  }
+}

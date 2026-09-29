@@ -1,0 +1,26 @@
+/* Centered Success Content */
+.modal-success-state {
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-check {
+  color: #22c55e;
+  font-size: 4.5rem; /* Slightly smaller for better fit */
+  margin-bottom: 20px;
+}
+
+.modal-success-state h2 {
+  color: #1a237e;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-success-state p {
+  color: #555;
+  line-height: 1.5;
+}

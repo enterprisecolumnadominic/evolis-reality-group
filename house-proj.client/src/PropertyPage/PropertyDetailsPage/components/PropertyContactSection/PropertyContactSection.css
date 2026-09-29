@@ -1,0 +1,245 @@
+.details-map-contact {
+  display: flex;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.map-placeholder {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-placeholder .section-heading {
+  margin-top: 0;
+}
+
+.map-image-container {
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  background-color: #eee;
+}
+
+.contact-mortgage-stack {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-mortgage-stack .section-heading {
+  margin-top: 0;
+}
+
+.cta-box {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cta-text {
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.business-detail {
+  color: #0a76cf;
+  font-weight: 600;
+}
+
+.inquire-button {
+  width: 100%;
+  background-color: #0a76cf;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inquire-button:hover {
+  background-color: #057dfd;
+  transform: translateY(-1px);
+}
+
+.inquire-button.secondary {
+  background-color: #0a76cf; /* Navy Blue for contrast */
+}
+
+/* ... Keep your existing map-placeholder and cta-box styles ... */
+
+/* --- Updated Social Footer for Column Layout --- */
+.map-social-footer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column; /* 🔑 Stacks icons under the label */
+  align-items: flex-start; /* Aligns both to the left */
+  gap: 12px; /* Space between label and icons */
+  padding: 10px 0;
+}
+
+.share-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a237e;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.map-social-icons {
+  display: flex;
+  gap: 20px; /* Space between the icons */
+}
+
+.map-icon {
+  font-size: 2.2rem; /* 🔑 Larger icons as requested */
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.map-icon:hover {
+  transform: scale(1.1) translateY(-2px); /* Slight pop effect on hover */
+}
+
+/* 🎨 Permanent Brand Colors (No more gray) */
+.map-icon.fb {
+  color: #1877f2;
+}
+.map-icon.tw {
+  color: #1da1f2;
+}
+.map-icon.li {
+  color: #0a66c2;
+}
+.map-icon.wa {
+  color: #25d366;
+}
+
+/* Stack everything vertically and center it */
+.agent-identity-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.agent-image-wrapper {
+  margin-bottom: 12px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.agent-avatar-round {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  image-rendering: high-quality;
+}
+
+.agent-avatar-placeholder-round {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #999;
+}
+
+.agent-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 5px 0;
+}
+
+.agent-specialties {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 200px; /* Keeps the array from getting too wide */
+  margin: 0 auto;
+}
+
+/* --- Property Type Indicators in Contact Section --- */
+
+.status-indicator {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  align-self: flex-start; /* Keeps it from stretching full width */
+}
+
+/* 🟢 For Sale (Buy) */
+.status-indicator.type-buy {
+  background-color: #e3f2fd;
+  color: #0a76cf;
+  border-left: 4px solid #0a76cf;
+}
+
+/* 🟠 For Rent */
+.status-indicator.type-rent {
+  background-color: #fff8e1;
+  color: #ffaa00;
+  border-left: 4px solid #ffaa00;
+}
+
+/* 🔴 Foreclosed */
+.status-indicator.type-foreclosed {
+  background-color: #ffebee;
+  color: #d32f2f;
+  border-left: 4px solid #d32f2f;
+}
+
+/* Optional: Make the Inquire button match the Foreclosed theme if it's a repo */
+.type-foreclosed ~ .inquire-button {
+  background-color: #d32f2f;
+}
+
+.type-foreclosed ~ .inquire-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive: Stack social icons on small mobile */
+@media (max-width: 480px) {
+  .map-social-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

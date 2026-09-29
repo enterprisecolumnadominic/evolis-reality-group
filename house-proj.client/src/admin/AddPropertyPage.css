@@ -1,0 +1,152 @@
+/* src/admin/AddPropertyPage.css */
+
+/* 1. Main Wrapper */
+#ap-container {
+  padding: 50px 20px;
+  background-color: #f4f7f9;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+#ap-container .ap-form-card {
+  background: white;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Navigation (Fixing the Black Box) */
+#ap-container .ap-back-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+#ap-container .ap-back-btn:hover {
+  color: #1a237e;
+  text-decoration: underline;
+}
+
+/* 3. Typography */
+#ap-container h1 {
+  color: #1a237e;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+#ap-container .ap-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+/* 4. Form Inputs (The Global Fix) */
+#ap-container input,
+#ap-container select,
+#ap-container textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #334155;
+  width: 100%;
+  display: block;
+  transition: border-color 0.2s;
+}
+
+#ap-container input:focus,
+#ap-container select:focus,
+#ap-container textarea:focus {
+  outline: none;
+  border-color: #1a237e;
+  background-color: #ffffff;
+}
+
+/* 5. Grid Logic */
+#ap-container .ap-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#ap-container .three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+#ap-container .five-col {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+/* 6. Specialized Sections */
+#ap-container .ap-section {
+  margin-bottom: 35px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+#ap-container .description-field textarea {
+  height: 180px;
+  resize: none;
+}
+
+/* 7. Action Buttons */
+#ap-container .ap-footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+#ap-container .ap-submit-btn {
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#ap-container .ap-discard-btn {
+  background-color: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Employee Assignment Specific Styles --- */
+
+/* 1. Target the specific select dropdown for employees */
+#ap-container .ap-employee-select {
+  cursor: pointer;
+  font-weight: 500;
+}
+/* 2. Styling the helper hint text below the dropdown */
+#ap-container .ap-input-hint {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* 3. Add a little extra breathing room for the Personnel section title */
+#ap-container .ap-section:has(.ap-employee-select) .ap-section-title {
+  padding-left: 12px;
+  margin-bottom: 20px;
+}

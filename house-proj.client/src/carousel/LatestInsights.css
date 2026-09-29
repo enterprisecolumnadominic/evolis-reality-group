@@ -1,0 +1,108 @@
+/* --- 1. Section Header (Synced with OurServices) --- */
+.li-main-container {
+  background-color: #fcfcfc;
+  padding: 80px 0;
+}
+
+.li-section-tag {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0a76cf; /* Matches os-badge */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.li-section-subtitle {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #1a237e;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.li-title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #0a76cf;
+  margin: 20px auto 50px;
+}
+
+/* --- 2. Card Structure (Smaller & Architectural) --- */
+.li-card-block {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-end;
+  transition:
+    transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s ease;
+}
+
+.li-card-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(26, 35, 126, 0.15);
+}
+
+/* --- 3. The Navy Gradient (Synced Flair) --- */
+.li-card-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.li-card-block:hover::before {
+  background-color: rgba(26, 35, 126, 0.5); /* Slight darkening on hover */
+}
+
+/* --- 4. Content Area --- */
+.li-card-content {
+  width: 100%;
+  padding: 30px;
+  z-index: 2;
+}
+
+.li-card-title {
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-size: 1.6rem; /* Slightly smaller for the smaller box */
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.li-tagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+/* --- 5. The Button (Synced Flair) --- */
+.li-view-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.li-view-btn:hover {
+  background-color: #ffffff;
+  color: #1a237e;
+  transform: scale(1.05);
+}

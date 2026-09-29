@@ -1,0 +1,35 @@
+/* --- Optimized Phone Input Group --- */
+.inquiry-form .phone-input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* The Country Dropdown */
+.inquiry-form .country-code-select {
+  /* flex-grow-0 ensures it stays exactly 110px */
+  flex: 0 0 auto;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-right: none; /* Merges visually with the input */
+  border-radius: 4px 0 0 4px; /* Round only left corners */
+  font-size: 0.85rem;
+  height: 45px;
+}
+
+/* The Phone Number Input */
+.inquiry-form .phone-field {
+  /* flex-grow-1 ensures it takes the remaining width */
+  flex: 1 1 auto;
+  border: 1px solid #ddd;
+  border-radius: 0 4px 4px 0; /* Round only right corners */
+  height: 45px;
+  padding: 10px 12px;
+}
+
+/* Focus State Fix */
+.inquiry-form .phone-input-group:focus-within .country-code-select,
+.inquiry-form .phone-input-group:focus-within .phone-field {
+  border-color: #0a76cf;
+}

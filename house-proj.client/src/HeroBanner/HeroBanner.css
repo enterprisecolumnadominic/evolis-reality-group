@@ -1,0 +1,98 @@
+/* Unique Hero Wrapper */
+.hb-hero-container {
+  min-height: 85vh; /* Responsive height based on screen size */
+  width: 100%;
+  position: relative;
+
+  /* Gradient Overlay + Background Image */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1605146769289-440113cc3d00?fit=crop&w=1920&q=80");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect for desktop */
+}
+
+.hb-hero-content {
+  color: white;
+  animation: hbFadeInUp 1s ease-out; /* Smooth entry animation */
+}
+
+/* Subtitle Styling */
+.hb-subtitle {
+  font-size: 1.25rem;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Title Styling */
+.hb-main-title {
+  text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hb-company-accent {
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 300;
+  display: block;
+  font-size: 0.6em;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Button Styling (Following your Brand Blue) */
+.hb-explore-btn {
+  background-color: #0a76cf;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hb-explore-btn:hover {
+  background-color: white;
+  color: #0a76cf;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Entry Animation */
+@keyframes hbFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+  .hb-hero-container {
+    min-height: 70vh;
+    background-attachment: scroll;
+  }
+
+  .hb-main-title {
+    font-size: 2.5rem !important; /* Slightly smaller for mobile stacking */
+    line-height: 1.3;
+  }
+
+  .hb-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+  }
+
+  .hb-company-accent {
+    font-size: 0.85em;
+  }
+}

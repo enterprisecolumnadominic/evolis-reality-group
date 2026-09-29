@@ -1,0 +1,54 @@
+/* Shared Modal Shell */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2500;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white !important;
+  padding: 30px;
+  border-radius: 12px;
+  width: 95%; /* Better for mobile */
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-button:hover {
+  color: #1a237e;
+  transform: scale(1.1);
+}
+
+@keyframes modalFadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

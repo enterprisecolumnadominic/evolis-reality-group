@@ -1,0 +1,45 @@
+# ==========================================
+# 1. ENVIRONMENT & SECRETS
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# Service Account Keys & Firestore Secret Files
+*serviceAccountKey*.json
+*firebase-key*.json
+*firestore-key*.json
+
+# Local Firebase CLI build cache
+.firebase/
+
+# ==========================================
+# 2. .NET APPSETTINGS OVERRIDES
+# ==========================================
+# Keep base appsettings.json committed; ignore environment/secret overrides
+appsettings.Development.json
+appsettings.Local.json
+appsettings*.Secret.json
+appsettings*.secrets.json
+appsettings.Debug.json
+
+# ==========================================
+# 3. BUILD OUTPUTS & DEPENDENCIES
+# ==========================================
+[Bb]in/
+[Ob]j/
+.vs/
+node_modules/
+packages/
+TestResults/
+*.user
+!.slnLaunch.user
+
+# ==========================================
+# 4. RETAIN ASSETS
+# ==========================================
+!**/assets/
+!**/wwwroot/
+
+# Continue AI extension configuration and logs
+.continue/
